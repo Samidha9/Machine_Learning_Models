@@ -1,24 +1,24 @@
-# Machine Learning Models — Built From Scratch
+# Machine Learning Models — From First Principles
 
-This repository contains a small set of core machine learning models that I implemented **from scratch using NumPy**.
+This repository contains a small set of core machine learning models that I implemented from scratch using NumPy.
 
-I built these notebooks deliberately without using high-level ML libraries so I could develop a **deep understanding of the mathematics and optimization logic** behind how these models actually learn — rather than treating them as black boxes.
+I built these notebooks to develop a deep, hands-on understanding of the mathematics and optimization logic behind how machine learning models learn — from defining loss functions to computing gradients and updating parameters.
 
-The focus here is on *how* and *why* the algorithms work, not just on getting predictions.
+The goal of this work is to understand what happens inside a model during training, rather than just using it as an abstraction.
 
 ---
 
 ## What this repository demonstrates
 
-Through these notebooks, I focused on understanding:
+Through these notebooks, I focused on building intuition for:
 
-- How loss functions are mathematically defined and what they represent  
-- How gradients are derived and used to update parameters  
-- Why gradient descent converges (or fails) under certain conditions  
-- How vectorization changes both performance and clarity  
-- How linear models differ from probabilistic classification models at a mathematical level  
+- How loss functions are defined mathematically and what they measure  
+- How gradients are derived and used to update model parameters  
+- How gradient descent behaves during training and convergence  
+- How vectorization connects linear algebra to efficient computation  
+- How regression and classification models differ at a mathematical level  
 
-Every model is trained using manually written training loops, gradient calculations, and update rules.
+Each notebook includes a full training loop, explicit gradient computation, and prediction logic.
 
 ---
 
@@ -26,59 +26,59 @@ Every model is trained using manually written training loops, gradient calculati
 
 ### 1. Linear Regression
 Implemented to understand:
-- Mean Squared Error (MSE) as a loss function  
-- Derivation of gradients with respect to weights and bias  
+- Mean Squared Error (MSE) as an optimization objective  
+- Gradient derivation with respect to weights and bias  
 - How gradient descent minimizes error over iterations  
-- The relationship between learning rate, convergence, and stability  
+- The effect of learning rate on convergence and stability  
 
-This notebook helped build intuition around optimization and parameter updates.
+This notebook builds intuition around optimization in its simplest form.
 
 ---
 
 ### 2. Multivariate Linear Regression
 An extension of linear regression to multiple features, focusing on:
-- Vector and matrix representations of data  
+- Matrix-based representations of data  
 - Fully vectorized gradient computation  
-- How dimensionality affects gradients and learning dynamics  
+- How dimensionality influences learning dynamics  
 
-This notebook emphasizes the math behind scaling linear models beyond a single feature.
+This notebook emphasizes how linear algebra scales learning beyond a single feature.
 
 ---
 
 ### 3. Logistic Regression
-Built from first principles to understand classification:
+Implemented from first principles to understand classification:
 - Sigmoid function as a probability mapping  
-- Binary cross-entropy loss and why it is used instead of MSE  
+- Binary cross-entropy loss and its mathematical motivation  
 - Gradient computation for probabilistic models  
-- How decision boundaries emerge from linear combinations  
+- How decision boundaries emerge from linear combinations of features  
 
-This notebook connects linear algebra with probability and optimization.
+This notebook connects linear models with probability and optimization.
 
 ---
 
 ## Implementation details
 
 - Language: Python  
-- Libraries used: NumPy (for numerical computation), Matplotlib (for visualization where needed)  
+- Libraries: NumPy for numerical computation, Matplotlib for visualization where relevant  
 
-All learning logic — loss functions, gradients, and updates — is implemented manually.
+All learning logic — including loss functions, gradients, and parameter updates — is implemented explicitly for clarity and understanding.
 
 ---
 
 ## Why I built this
 
-Writing these models from scratch helped me:
-- Build strong intuition for ML optimization  
-- Debug models more confidently when using real ML libraries  
-- Understand why certain hyperparameters behave the way they do  
-- Bridge the gap between mathematical theory and practical implementation  
+Working through these models step by step helped me:
+- Develop strong intuition for ML optimization  
+- Reason about convergence, overfitting, and stability  
+- Better understand how modern ML libraries behave internally  
+- Connect mathematical theory with practical implementation  
 
-This repo represents my effort to learn machine learning **from first principles** before applying it at scale.
+This repository reflects my approach to learning machine learning from the ground up, starting with fundamentals and building forward.
 
 ---
 
 ## Notes
 
-These implementations prioritize clarity and correctness over performance.  
-They are meant for learning, experimentation, and understanding — not for production use.
+These notebooks prioritize clarity and mathematical understanding.  
+They are intended for learning, experimentation, and building strong foundations.
 
